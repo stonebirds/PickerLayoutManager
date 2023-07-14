@@ -61,6 +61,7 @@ open class DatePickerView @JvmOverloads constructor(
             val month = monthPickerView.getMonth()
             setDayInterval(year, month)
 
+
             dispatchOnItemSelected()
         }
     }
