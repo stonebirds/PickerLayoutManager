@@ -41,7 +41,13 @@ open class DatePickerView @JvmOverloads constructor(
         val year = yearPickerView.getYear()
         when (year) {
             mStartYear -> {
-                monthPickerView.setMonthInterval(mStartMonth)
+                //修改地方-start
+                if (year == mEndYear) {
+                    monthPickerView.setMonthInterval(mStartMonth, mEndMonth)
+                } else {
+                    monthPickerView.setMonthInterval(mStartMonth)
+                }
+                //修改地方-end
             }
             mEndYear -> {
                 monthPickerView.setMonthInterval(endMonth = mEndMonth)
